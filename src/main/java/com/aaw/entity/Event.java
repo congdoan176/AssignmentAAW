@@ -1,12 +1,14 @@
 package com.aaw.entity;
 
+import java.util.Calendar;
+
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
 @Entity
 public class Event {
     @Id
-    private int id;
+    private long id;
     private String dayEvent;
     private String timeEvent;
     private String planning;
@@ -14,6 +16,7 @@ public class Event {
     private String info;
 
     public Event() {
+    	this.id = Calendar.getInstance().getTimeInMillis();
     }
 
     public Event(int id, String dayEvent, String timeEvent, String planning, String place, String info) {
@@ -24,17 +27,15 @@ public class Event {
         this.place = place;
         this.info = info;
     }
+    public long getId() {
+		return id;
+	}
 
-    public int getId() {
-        return id;
-    }
+	public void setId(long id) {
+		this.id = id;
+	}
 
-    public Event setId(int id) {
-        this.id = id;
-        return this;
-    }
-
-    public String getDayEvent() {
+	public String getDayEvent() {
         return dayEvent;
     }
 
