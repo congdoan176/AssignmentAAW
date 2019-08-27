@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="aawassignment:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/aawassignment_war_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="aawassignment/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="aawassignment" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>
